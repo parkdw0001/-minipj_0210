@@ -9,6 +9,12 @@ DATA_ROOT = Path("/content/drive/MyDrive/data")
 SRC_NORMAL = DATA_ROOT / "normal"
 SRC_WRONG  = DATA_ROOT / "wrongway"
 
+# ✅ 디버그 출력
+print("NORMAL PATH:", SRC_NORMAL)
+print("WRONG PATH :", SRC_WRONG)
+print("NORMAL FILES:", list(SRC_NORMAL.glob("*"))[:5])
+print("WRONG FILES :", list(SRC_WRONG.glob("*"))[:5])
+
 OUT = Path(r"dataset")  # 최종 분리 폴더
 splits = {"train":0.7, "val":0.15, "test":0.15}
 
@@ -41,8 +47,6 @@ def main():
     copy_split(SRC_WRONG,  "wrongway")
     print("✅ done:", OUT.resolve())
 
-    print("normal count:", len(list(SRC_NORMAL.glob("*"))))
-    print("wrongway count:", len(list(SRC_WRONG.glob("*"))))
 
 if __name__ == "__main__":
     main()
