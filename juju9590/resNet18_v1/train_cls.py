@@ -7,7 +7,7 @@ from torchvision import datasets, transforms, models
 from sklearn.metrics import classification_report, confusion_matrix
 from tqdm import tqdm
 
-DATA_DIR = Path("/content/-minipj_0210/juju9590/resNet18_v1/dataset")
+DATA_DIR = Path("/-minipj_0210/juju9590/resNet18_v1/dataset")
 BATCH_SIZE = 32
 EPOCHS = 8
 LR = 1e-3
